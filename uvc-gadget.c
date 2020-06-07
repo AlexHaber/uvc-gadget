@@ -132,7 +132,7 @@ static const struct uvc_frame_info uvc_frames_yuyv[] = {
     {
         WIDTH2,
         HEIGHT2,
-        {50000000, 0},
+        {333333, 666666, 10000000, 50000000, 0},
     },
     {
         0,
@@ -153,7 +153,7 @@ static const struct uvc_frame_info uvc_frames_mjpeg[] = {
     {
         WIDTH2,
         HEIGHT2,
-        {50000000, 0},
+        {333333, 666666, 10000000, 50000000, 0},
     },
     {
         0,
@@ -2043,8 +2043,8 @@ static void usage(const char *argv0)
             "1 = USER_PTR\n");
     fprintf(stderr,
             " -r <resolution> Select frame resolution:\n\t"
-            "0 = HEIGHT1p, VGA (WIDTH1xHEIGHT1)\n\t"
-            "1 = 720p, (WIDTH2xHEIGHT2)\n");
+            "0 = 360p, VGA (640x360)\n\t"
+            "1 = 1080p, (1920x1080)\n");
     fprintf(stderr,
             " -s <speed>	Select USB bus speed (b/w 0 and 2)\n\t"
             "0 = Full Speed (FS)\n\t"
