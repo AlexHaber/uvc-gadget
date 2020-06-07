@@ -2104,6 +2104,7 @@ int main(int argc, char *argv[])
 
         case 'i':
             mjpeg_image = optarg;
+            printf("Using static image: %s\n", mjpeg_image);
             break;
 
         case 'm':
