@@ -12,8 +12,8 @@ echo 0x01 > /sys/kernel/config/usb_gadget/pi4/bDeviceProtocol
 
 mkdir /sys/kernel/config/usb_gadget/pi4/strings/0x409
 echo 100000000d2386db > /sys/kernel/config/usb_gadget/pi4/strings/0x409/serialnumber
-echo "Samsung" > /sys/kernel/config/usb_gadget/pi4/strings/0x409/manufacturer
-echo "PI4 USB Device" > /sys/kernel/config/usb_gadget/pi4/strings/0x409/product
+echo "Ikestrom" > /sys/kernel/config/usb_gadget/pi4/strings/0x409/manufacturer
+echo "RPi USB Device" > /sys/kernel/config/usb_gadget/pi4/strings/0x409/product
 mkdir /sys/kernel/config/usb_gadget/pi4/configs/c.2
 mkdir /sys/kernel/config/usb_gadget/pi4/configs/c.2/strings/0x409
 echo 500 > /sys/kernel/config/usb_gadget/pi4/configs/c.2/MaxPower
@@ -26,6 +26,9 @@ ln -s /sys/kernel/config/usb_gadget/pi4/functions/uvc.usb0/control/header/h /sys
 
 mkdir -p /sys/kernel/config/usb_gadget/pi4/functions/uvc.usb0/streaming/mjpeg/m/1080p
 cat <<EOF > /sys/kernel/config/usb_gadget/pi4/functions/uvc.usb0/streaming/mjpeg/m/1080p/dwFrameInterval
+333333
+666666
+1000000
 5000000
 EOF
 cat <<EOF > /sys/kernel/config/usb_gadget/pi4/functions/uvc.usb0/streaming/mjpeg/m/1080p/wWidth
